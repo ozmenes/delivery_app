@@ -16,46 +16,11 @@ class _SignInPagePageState extends State<SignInPage> {
   final _formKey = GlobalKey<FormState>();
   final _scaffoldKey = GlobalKey<ScaffoldState>();
 
-  // HelperFunctions helperFunction = new HelperFunctions();
-  // Authentication _authentication = new Authentication();
-  // Database database = new Database();
-  // QuerySnapshot snapshotUserInfo;
-
   TextEditingController emailTextEditingController = new TextEditingController();
   TextEditingController passwordTextEditingController = new TextEditingController();
   bool isLoading =false;
 
 
-  // signIn(){
-  //   if(_formKey.currentState.validate()){
-  //     HelperFunctions.saveUserEmailSharedPreference(
-  //         emailTextEditingController.text);
-  //
-  //     // function o get userDetails
-  //
-  //     database.getUserByUserEmail(emailTextEditingController.text)
-  //         .then((value){
-  //       snapshotUserInfo = value;
-  //       HelperFunctions
-  //           .saveUserNameSharedPreference(snapshotUserInfo
-  //           .documents[0].data["name"]);
-  //     });
-  //
-  //     _authentication.signInWithEmailAndPassword(emailTextEditingController.text,
-  //         passwordTextEditingController.text).then((value) {
-  //       if(value != null){
-  //
-  //         HelperFunctions.saveUserLoggedInSharedPreference(true);
-  //         Navigator.pushReplacement(context, MaterialPageRoute(
-  //             builder: (context) => Home()
-  //         ));
-  //       }
-  //     });
-  //     setState(() {
-  //       isLoading = true;
-  //     });
-  //   }
-  // }
   @override
   Widget build(BuildContext context) {
     return Scaffold(
