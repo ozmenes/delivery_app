@@ -1,5 +1,6 @@
 import 'package:delivery_flutter_app/screens/auth/authenticate.dart';
 import 'package:delivery_flutter_app/screens/home/homepage.dart';
+import 'package:delivery_flutter_app/screens/wrapper.dart';
 import 'package:flutter/material.dart';
 
 
@@ -17,7 +18,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: Authenticate()//MyHomePage(title: 'Delivery App v1'),
+      home: Wrapper()//MyHomePage(title: 'Delivery App v1'),
 
     );
   }
