@@ -1,3 +1,4 @@
+import 'package:delivery_flutter_app/screens/home/homepage.dart';
 import 'package:flutter/material.dart';
 import 'package:line_icons/line_icons.dart';
 
@@ -11,6 +12,8 @@ class _WrapperState extends State<Wrapper> {
   int activeTab = 0;
   bool pickUp= false;
   String pickUpORDelivery='';
+ double value =  2.8032739273;
+  //String formattedValue = value.toStringAsPrecision(3);
 
   @override
   Widget build(BuildContext context) {
@@ -20,19 +23,32 @@ class _WrapperState extends State<Wrapper> {
         child: IndexedStack(
           index: activeTab,
           children: <Widget>[
+            HomePage(),
             Center(
-              child: Text(
-                'Home'
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+
+                  Text(
+                      value.toString()
+                  ),
+                  Center(
+
+                    child: Text(
+                        value.toStringAsFixed(5)
+                    ),
+                  ),
+                  Center(
+                    child: Text(
+                        value.toStringAsPrecision(3)
+                    ),
+                  ),
+                ],
               ),
             ),
             Center(
               child: Text(
-                  'Map'
-              ),
-            ),
-            Center(
-              child: Text(
-                  'Shopping'
+                  value.toString()
               ),
             ),
             Center(
