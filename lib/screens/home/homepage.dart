@@ -18,9 +18,35 @@ class _HomePageState extends State<HomePage> {
         onPressed: (){},
       ),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerTop,
-      body: Center(
-        child: Text(
-            'Home'
+      body: SingleChildScrollView(
+        child: Container(
+          child: Column(
+
+            children: <Widget> [
+              SizedBox(height: 150.0,),
+              Center(
+                child: Text(
+                    '1Announcement'
+                ),
+              ),
+              Center(
+                child: Text(
+                    'Cuisines List with Icon'
+                ),
+              ),
+              Center(
+                child: Text(
+                    'Titel'
+                ),
+              ),
+              Center(
+                child: Text(
+                    'Shops list'
+                ),
+              ),
+
+            ],
+          ),
         ),
       ),
     );
