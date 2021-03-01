@@ -1,4 +1,5 @@
 import 'package:delivery_flutter_app/screens/home/homepage.dart';
+import 'package:delivery_flutter_app/screens/menu/menu.dart';
 import 'package:flutter/material.dart';
 import 'package:line_icons/line_icons.dart';
 
@@ -57,9 +58,7 @@ class _WrapperState extends State<Wrapper> {
               ),
             ),
             Center(
-              child: Text(
-                  'Settings'
-              ),
+              child: Menu(),
             ),
           ],
         ),
