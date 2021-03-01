@@ -1,3 +1,4 @@
+import 'package:delivery_flutter_app/screens/announcement.dart';
 import 'package:delivery_flutter_app/screens/search/filter.dart';
 import 'package:flutter/material.dart';
 
@@ -9,13 +10,13 @@ class DeliveryHome extends StatefulWidget {
 class _DeliveryHomeState extends State<DeliveryHome> {
   @override
   Widget build(BuildContext context) {
+    double width = MediaQuery.of(context).size.width;
     return Container(
       child: Column(
         children: [
           _deliverySearch(),
-          Center(
-            child: Text('Announcement'),
-          ),
+          SizedBox(height: 20.0,),
+          Announcement(width),
           Center(
             child: Text(
                 'Cuisines List with Icon'
