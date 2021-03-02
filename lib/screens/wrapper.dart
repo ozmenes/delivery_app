@@ -1,3 +1,4 @@
+import 'package:delivery_flutter_app/screens/carousel/image_carousel.dart';
 import 'package:delivery_flutter_app/screens/home/homepage.dart';
 import 'package:delivery_flutter_app/screens/menu/menu.dart';
 import 'package:flutter/material.dart';
@@ -25,28 +26,7 @@ class _WrapperState extends State<Wrapper> {
           index: activeTab,
           children: <Widget>[
             HomePage(),
-            Center(
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-
-                  Text(
-                      value.toString()
-                  ),
-                  Center(
-
-                    child: Text(
-                        value.toStringAsFixed(5)
-                    ),
-                  ),
-                  Center(
-                    child: Text(
-                        value.toStringAsPrecision(3)
-                    ),
-                  ),
-                ],
-              ),
-            ),
+            AnnouncementSlider(),
             Center(
               child: Text(
                   value.toString()
