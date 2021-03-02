@@ -14,7 +14,7 @@ class _WrapperState extends State<Wrapper> {
   int activeTab = 0;
   bool pickUp= false;
   String pickUpORDelivery='';
- double value =  2.8032739273;
+  double value =  2.8032739273;
   //String formattedValue = value.toStringAsPrecision(3);
 
   @override

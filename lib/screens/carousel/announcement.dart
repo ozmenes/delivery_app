@@ -8,7 +8,7 @@ class Announcement extends StatelessWidget {
     return Container(
       color: Colors.white,
       child: Padding(
-        padding: EdgeInsets.symmetric(horizontal: 10.0),
+        padding: EdgeInsets.symmetric(horizontal: 0.0),
         child: Container(
           height: 160.0,
           decoration: BoxDecoration(
@@ -18,6 +18,7 @@ class Announcement extends StatelessWidget {
           ),
           child: Row(
             children: [
+              //Texts come here
               Container(
                 padding: EdgeInsets.only(left: width / 20),
                 height: 150.0,
@@ -47,7 +48,7 @@ class Announcement extends StatelessWidget {
               //here comes the image
               Container(
                 height: 150.0,
-                width: width / 2.5,
+                width: width / 2.6,
                 decoration: BoxDecoration(
                     image: DecorationImage(
                         image:
