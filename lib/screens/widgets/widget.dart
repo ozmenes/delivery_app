@@ -31,3 +31,10 @@ TextStyle signInNowTextFieldStyle(){
     decoration: TextDecoration.underline,
   );
 }
+TextStyle cuisinTitelTextStyle(){
+  return TextStyle(
+      color: Colors.black,
+      fontSize: 17.0,
+      fontWeight: FontWeight.bold
+  );
+}
