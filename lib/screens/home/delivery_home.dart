@@ -1,5 +1,6 @@
 import 'package:delivery_flutter_app/screens/carousel/image_carousel.dart';
 import 'package:delivery_flutter_app/screens/cuisin/cuisinestitel.dart';
+import 'package:delivery_flutter_app/screens/cuisin/cuosoneslist.dart';
 import 'package:delivery_flutter_app/screens/search/filter.dart';
 import 'package:flutter/material.dart';
 
@@ -19,11 +20,7 @@ class _DeliveryHomeState extends State<DeliveryHome> {
           AnnouncementSlider(),
           //Announcement(width),
           CuisinesCardTitel(),
-          Center(
-            child: Text(
-                'Cuisines List with Icon'
-            ),
-          ),
+          CuisinesIconList(),
           Center(
             child: Text(
                 'Titel'
