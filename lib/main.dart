@@ -17,8 +17,7 @@ class MyApp extends StatelessWidget {
        scaffoldBackgroundColor: Colors.white,
        primaryColor: Colors.white,
       ),
-      home: Wrapper()//MyHomePage(title: 'Delivery App v1'),
-
+      home: Wrapper(),
     );
   }
 }

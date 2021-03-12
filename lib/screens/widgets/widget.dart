@@ -38,3 +38,10 @@ TextStyle cuisinTitelTextStyle(){
       fontWeight: FontWeight.bold
   );
 }
+TextStyle shopTitelTextStyle(){
+  return TextStyle(
+      color: Colors.black,
+      fontSize: 17.0,
+      fontWeight: FontWeight.bold
+  );
+}

@@ -12,8 +12,8 @@ class _AnnouncementSliderState extends State<AnnouncementSlider> {
   Widget build(BuildContext context) {
     double width = MediaQuery.of(context).size.width;
     Widget _image_carousel = new Container(
-      padding: EdgeInsets.all(10.0),
-      height: 250.0,
+      padding: EdgeInsets.symmetric(horizontal: 10.0,vertical: 10),
+      height: 230.0,
       child: new Carousel(
         boxFit: BoxFit.fill,
         images: [

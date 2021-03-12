@@ -5,7 +5,7 @@ class CuisinesCardTitel extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: EdgeInsets.symmetric(horizontal: 10.0,vertical: 10.0),
+      padding: EdgeInsets.symmetric(horizontal: 10.0,vertical: 5),
       child: Container(
         alignment: Alignment.centerLeft,
         child: Text("Explore cuisines",
