@@ -15,7 +15,7 @@ class _AnnouncementSliderState extends State<AnnouncementSlider> {
       padding: EdgeInsets.symmetric(horizontal: 10.0,vertical: 10),
       height: 230.0,
       child: new Carousel(
-        boxFit: BoxFit.fill,
+        boxFit: BoxFit.cover,
         images: [
           Announcement(width),
           AssetImage('assets/images/pepsi.jpg'),
