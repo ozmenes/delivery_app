@@ -1,4 +1,4 @@
-import 'package:delivery_flutter_app/screens/shop/detail.dart';
+import 'package:delivery_flutter_app/screens/shop/shopdetail.dart';
 import 'package:flutter/material.dart';
 
 class ShopCard extends StatefulWidget {
