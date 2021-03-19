@@ -1,4 +1,4 @@
-import 'package:delivery_flutter_app/screens/cuisin/cuosoneslist.dart';
+import 'package:delivery_flutter_app/screens/cuisin/cuisineslist.dart';
 import 'package:delivery_flutter_app/screens/product/productdetail.dart';
 import 'package:delivery_flutter_app/screens/shop/shopinfo.dart';
 import 'package:flutter/material.dart';

@@ -1,3 +1,4 @@
+import 'package:delivery_flutter_app/screens/cuisin/selectedcuisine.dart';
 import 'package:flutter/material.dart';
 
 class CuisinesIconList extends StatefulWidget {
@@ -26,6 +27,8 @@ class _CuisinesIconListState extends State<CuisinesIconList> {
                 setState(() {
                   selectedIndex = index;
                   print(selectedIndex);
+                  Navigator.push(context, MaterialPageRoute(builder: (builder)=>
+                      SelectedCuisine(cuisineName: cuisinesList[index])));
                 });
               },
               child: Container(
