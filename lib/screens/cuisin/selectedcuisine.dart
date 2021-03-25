@@ -28,6 +28,7 @@ class _SelectedCuisineState extends State<SelectedCuisine> {
                     child: DeliverySearch()
                 ),
                 Text(widget.cuisineName.toString(),style: TextStyle(fontSize: 25.0),),
+
                 ShopCard(),
               ],
             ),

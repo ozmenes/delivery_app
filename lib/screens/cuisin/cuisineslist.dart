@@ -28,7 +28,8 @@ class _CuisinesIconListState extends State<CuisinesIconList> {
                   selectedIndex = index;
                   print(selectedIndex);
                   Navigator.push(context, MaterialPageRoute(builder: (builder)=>
-                      SelectedCuisine(cuisineName: cuisinesList[index])));
+                      SelectedCuisine(cuisineName: cuisinesList[index])
+                  ));
                 });
               },
               child: Container(
