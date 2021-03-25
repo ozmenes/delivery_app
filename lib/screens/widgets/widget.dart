@@ -45,3 +45,17 @@ TextStyle shopTitelTextStyle(){
       fontWeight: FontWeight.bold
   );
 }
+TextStyle orderMediumWhiteTitelTextStyle(){
+  return TextStyle(
+      color: Colors.white,
+      fontSize: 15.0,
+      fontWeight: FontWeight.bold
+  );
+}
+TextStyle orderBigWhiteTitelTextStyle() {
+  return TextStyle(
+      color: Colors.white,
+      fontSize: 19.0,
+      fontWeight: FontWeight.bold
+  );
+}

@@ -1,9 +1,11 @@
+import 'package:delivery_flutter_app/models/order.dart';
+import 'package:delivery_flutter_app/screens/product/product_info.dart';
+import 'package:delivery_flutter_app/screens/widgets/widget.dart';
 import 'package:flutter/material.dart';
 import 'package:sliding_up_panel/sliding_up_panel.dart';
 
 import 'expansions/size_item.dart';
 import 'expansions/souce_item.dart';
-
 
 class ProductDetailPage extends StatefulWidget {
   ProductDetailPage({this.productName});
@@ -15,7 +17,7 @@ class ProductDetailPage extends StatefulWidget {
 class _ProductDetailPageState extends State<ProductDetailPage> {
   bool isfavorited = false;
   int minOrder = 1;
-  //Order _order = new Order() ;
+  Order _order = new Order() ;
   double orderCartPrice = 6.90;
   int orderAdded = 0;
   bool cartAdded = false;
@@ -97,7 +99,7 @@ class _ProductDetailPageState extends State<ProductDetailPage> {
                             ),
                             onPressed: (){
                               setState(() {
-                                Navigator.push(context, MaterialPageRoute(builder: (builder)=>ProductDetailPage()));
+                                Navigator.push(context, MaterialPageRoute(builder: (builder)=>ProductInfoPage()));
                               });
                             },
                           ),
@@ -192,7 +194,6 @@ class _ProductDetailPageState extends State<ProductDetailPage> {
                           ),
                         ),
                       ),
-
                     ],
                   ),
                 ),
@@ -264,6 +265,76 @@ class _ProductDetailPageState extends State<ProductDetailPage> {
                 thickness: 2,
               ),
             ],
+          ),
+        ),
+      ),
+      bottomNavigationBar: addToOrderBottom(),
+    );
+  }
+  Widget addToOrderBottom(){
+    return GestureDetector(
+      onTap: (){
+        _order.orderName = itemName;
+        //_order.orderPrice = orderCartPrice;
+        print(_order.orderName.toString());
+        print(orderCartPrice);
+
+        Order().orderPrice=orderCartPrice;
+        print(orderCartPrice);
+        setState(() {
+          orderAdded+=1;
+          if(orderAdded != 0){
+            cartAdded=true;
+          }
+        });
+        //Navigator.push(context, MaterialPageRoute(builder: (builder)=> OrderPage()));
+      },
+      child: Container(
+        decoration: BoxDecoration(
+
+        ),
+        width: MediaQuery.of(context).size.width,
+        height: 75,
+        child: Padding(
+          padding: const EdgeInsets.only(top: 0.0,bottom: 10,left: 15,right: 15),
+          child: Container(
+            decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(30),
+                color: Colors.black
+            ),
+            child: Padding(
+              padding: const EdgeInsets.only(left: 60,right: 60,bottom: 10,top: 10),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Container(
+                    child: Text(
+                      "Add to Order ",
+                      style: orderMediumWhiteTitelTextStyle(),
+                    ),
+                  ),
+                  Container(
+                    height: 50,
+                    width: 100,
+                    decoration: BoxDecoration(
+                        gradient: LinearGradient(
+                            colors: [
+                              Colors.black,
+                              Colors.black,
+                            ]
+                        ),
+                        borderRadius: BorderRadius.circular(60)
+                    ),
+                    child: Container(
+                        padding: EdgeInsets.only(top: 11,left: 17),
+                        child: Text(
+                          '$orderCartPrice €',
+                          style: orderBigWhiteTitelTextStyle(),
+                        )),
+                  ),
+                ],
+              ),
+            ),
           ),
         ),
       ),
