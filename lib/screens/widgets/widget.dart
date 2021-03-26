@@ -59,3 +59,18 @@ TextStyle orderBigWhiteTitelTextStyle() {
       fontWeight: FontWeight.bold
   );
 }
+TextStyle orderShopNameTextTextFieldStyle(){
+  return TextStyle(
+    color: Colors.black,
+    fontSize: 17.0,
+    fontWeight: FontWeight.w600,
+    decoration: TextDecoration.underline,
+  );
+}
+TextStyle orderShopAddressTextTextFieldStyle(){
+  return TextStyle(
+    color: Colors.black,
+    fontSize: 14.0,
+    fontWeight: FontWeight.w600,
+  );
+}

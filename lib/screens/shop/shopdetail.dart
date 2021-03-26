@@ -11,6 +11,7 @@ class ShopDetailPage extends StatefulWidget {
 
 class _ShopDetailPageState extends State<ShopDetailPage> {
   bool isfavorited = false;
+  String itemName;
   @override
   Widget build(BuildContext context) {
     double height = MediaQuery.of(context).size.height;
@@ -195,11 +196,11 @@ class _ShopDetailPageState extends State<ShopDetailPage> {
               child: Column(
                 children: [
                   GestureDetector(
-                    child: deliveryItemTab("assets/images/classic.png", "Classic",
+                    child: deliveryItemTab("assets/images/classic.png", itemName="Classic Italien Pizza",
                         "Tamota sauce, cheese", "6.99",800, "Kassel"),
                     onTap: (){
                       setState(() {
-                        Navigator.push(context, MaterialPageRoute(builder: (builder)=>ProductDetailPage()));
+                        Navigator.push(context, MaterialPageRoute(builder: (builder)=>ProductDetailPage( productName: itemName,)));
                       });
                     },
                   ),

@@ -1,4 +1,5 @@
 import 'package:delivery_flutter_app/models/order.dart';
+import 'package:delivery_flutter_app/screens/order/orderpage.dart';
 import 'package:delivery_flutter_app/screens/product/product_info.dart';
 import 'package:delivery_flutter_app/screens/widgets/widget.dart';
 import 'package:flutter/material.dart';
@@ -21,7 +22,7 @@ class _ProductDetailPageState extends State<ProductDetailPage> {
   double orderCartPrice = 6.90;
   int orderAdded = 0;
   bool cartAdded = false;
-  String itemName = 'Classic Italien Pizza';
+  //String itemName = 'Classic Italien Pizza';
   int itemPrice= 0;
   @override
   Widget build(BuildContext context) {
@@ -82,7 +83,7 @@ class _ProductDetailPageState extends State<ProductDetailPage> {
                   crossAxisAlignment: CrossAxisAlignment.end,
                   children: [
                     Text(
-                      "$itemName",
+                      widget.productName,
                       style: TextStyle(
                           fontSize: 26.0, fontWeight: FontWeight.bold),
                     ),
@@ -274,7 +275,7 @@ class _ProductDetailPageState extends State<ProductDetailPage> {
   Widget addToOrderBottom(){
     return GestureDetector(
       onTap: (){
-        _order.orderName = itemName;
+        _order.orderName = widget.productName;
         //_order.orderPrice = orderCartPrice;
         print(_order.orderName.toString());
         print(orderCartPrice);
@@ -287,6 +288,7 @@ class _ProductDetailPageState extends State<ProductDetailPage> {
             cartAdded=true;
           }
         });
+        Navigator.pushReplacement(context, MaterialPageRoute(builder: (builder)=>OrderPage()));
         //Navigator.push(context, MaterialPageRoute(builder: (builder)=> OrderPage()));
       },
       child: Container(
